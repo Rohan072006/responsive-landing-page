@@ -17,10 +17,9 @@ body{
 }
 .nav-links{
     display: flex;
-    list-style: none;
     gap: 20px;
 }
-.nav-limks a{
+.nav-links a{
     text-decoration: none;
     color: white;
 }
@@ -126,6 +125,9 @@ html{
 button:hover{
     transform: translateY(-3px);
 }
+.menu-toggle{
+  display: none;
+}
 @media (max-width: 768px){
 
   .hero{
@@ -150,17 +152,7 @@ button:hover{
   p{
     font-size: 1rem;
   }
-  nav{
-  flex-direction: column;
-  gap: 15px;
-}
-
-nav ul{
-  flex-direction: column;
-  gap: 10px;
-  padding: 0;
-}
-
+ 
 .logo{
   margin-bottom: 10px;
 }
@@ -173,6 +165,37 @@ nav ul{
   width: 80%;
   margin-bottom: 20px;
 }
+ .navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    position: relative;
+}
+
+  .menu-toggle{
+    display: block;
+    font-size: 32px;
+    color: white;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+
+  .nav-links{
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 80px;
+    right: 20px;
+    background: black;
+    padding: 20px;
+    border-radius: 10px;
+    gap: 15px;
+    list-style: none;
+}
+  .nav-links.active{
+    display: flex;
+  }
 
 }
 
@@ -233,4 +256,54 @@ footer{
 footer p:hover{
   color: #60a5fa;
   transition: 0.3s ease;
+}
+#message{
+  margin-top: 20px;
+  font-size: 20px;
+  color: #60a5fa;
+}
+.light-mode{
+  background: white;
+}
+
+.light-mode .hero{
+  background: #f5f5f5;
+  color: black;
+}
+
+.light-mode .hero p{
+  color: #333;
+}
+
+.light-mode .services{
+  background: #e5e7eb;
+}
+
+.light-mode .services h2{
+  color: black;
+}
+
+.light-mode .service-card{
+  background: white;
+  color: black;
+}
+.light-mode .about{
+  background: #f3f4f6;
+  color: black;
+}
+
+.light-mode .about p{
+  color: #333;
+}
+
+.light-mode footer{
+  background: #d1d5db;
+  color: black;
+}
+body,
+.hero,
+.services,
+.service-card,
+footer{
+  transition: 0.4s ease;
 }
