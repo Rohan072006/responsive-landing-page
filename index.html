@@ -15,10 +15,9 @@
         </div>
 
         <ul class="nav-links">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Contact</a></li>
+           <li><a href="#home" class="nav-item">Home</a></li>
+           <li><a href="#about" class="nav-item">About</a></li>
+           <li><a href="#services" class="nav-item">Services</a></li>
         </ul>
 
         <button id="theme-btn">🌙</button>
@@ -29,43 +28,118 @@
 
     </nav>
 </header>
-<seection class="hero">
+<seection id="home" class="hero">
     <div class="hero-content">
         <h1>Build Mordern Websites</h1>
+        <h2 id="typing-text"></h2>
         <p>Learn frontend development and create beautiful responsive website.</p>
         <button id="start-btn">Get Started</button>
         <p id="message"></p>
     </div>
 </seection>
-<section class="about">
-    <h2>About Us</h2>
 
-    <p>
-        We help beginners frontend development and build amazing websites using HTML, CSS, JavaScript.
-    </p>
+<section id="about" class="about reveal">
+
+    <div class="about-content">
+
+        <div class="about-text">
+            <h2>About Us</h2>
+
+            <p>
+                We help beginners learn frontend development and build modern responsive websites using HTML, CSS and JavaScript.
+            </p>
+
+            <button>Learn More</button>
+        </div>
+
+        <div class="about-boxes">
+
+            <div class="about-card">
+                <h3>HTML</h3>
+                <p>Structure modern webpages easily.</p>
+            </div>
+
+            <div class="about-card">
+                <h3>CSS</h3>
+                <p>Create beautiful responsive designs.</p>
+            </div>
+
+            <div class="about-card">
+                <h3>JavaScript</h3>
+                <p>Add interactivity and animations.</p>
+            </div>
+
+        </div>
+
+    </div>
+
 </section>
-<section class="services">
+
+<section id="services" class="services reveal">
     <h2>Our Services</h2>
 
     <div class="service-container">
 
     <div class="card">
-        <h3>Web Design</h3>
+        <h3>🎨 Web Design</h3>
         <p>Create mordern and responsive website designs.</p>
     </div>
 
     <div class="card">
-        <h3>Frontend Development</h3>
+        <h3>💻 Frontend Development</h3>
         <p>Build interactive websites using HTML, CSS, and JavaScript.</p>
     </div>
     <div class="card">
-        <h3>Responsive Design</h3>
+       <h3>📱 Responsive Design</h3>
         <p>Make websites work smoothly on all devices.</p>
     </div>
     </div>
 </section>
+
+<section id="testimonials" class="testimonials reveal">
+
+    <h2>What People Say</h2>
+
+    <div class="testimonial-container">
+
+        <div class="testimonial-card">
+            <p>"Amazing responsive website design!"</p>
+            <h4>- Alex</h4>
+        </div>
+
+        <div class="testimonial-card">
+            <p>"Modern UI and smooth animations."</p>
+            <h4>- Karan</h4>
+        </div>
+
+        <div class="testimonial-card">
+            <p>"Very professional frontend work."</p>
+            <h4>- Sahil</h4>
+        </div>
+
+    </div>
+
+</section>
+<section id="contact" class="contact reveal">
+
+    <h2>Contact Us</h2>
+
+    <form id="contact-form">
+
+        <input type="text" placeholder="Your Name" required>
+
+        <input type="email" placeholder="Your Email" required>
+
+        <textarea placeholder="Your Message" required></textarea>
+
+        <button type="submit">Send Message</button>
+
+    </form>
+
+</section>
 <script src="script.js"></script>
 </body>
+
 <footer>
    <p>© 2026 MySite | All Rights Reserved</p>
 </footer>
