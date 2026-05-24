@@ -21,10 +21,17 @@ body{
     display: flex;
     gap: 20px;
 }
+
 .nav-links a{
     text-decoration: none;
     color: white;
+    transition: 0.3s ease;
 }
+
+.nav-links a:hover{
+    color: #60a5fa;
+}
+
 nav ul{
   display: flex;
   gap: 20px;
@@ -111,23 +118,26 @@ nav ul{
 }
 
 .about-card{
-  background: rgba(255,255,255,0.1);
-  padding: 25px;
-  border-radius: 15px;
-  backdrop-filter: blur(10px);
-  transition: 0.3s ease;
-  max-width: 500px;
+    background: rgba(255,255,255,0.1);
+    padding: 25px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+
+    border: 1px solid rgba(255,255,255,0.2);
+
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+
+    transition: 0.3s ease;
 }
 
 .about-card:hover{
   transform: translateY(-5px);
 }
+
 .services{
     padding: 80px 50px;
-
     text-align: center;
-
-    background-color: #f4f4f4;
+    background: linear-gradient(to right, #141e30, #243b55);
 }
 
 .services h2{
@@ -180,10 +190,15 @@ nav ul{
 html{
     scroll-behavior: smooth;
 }
+
 button:hover{
-  transform: translateY(-3px);
-  opacity: 0.9;
+    background: #2563eb;
+
+    transform: translateY(-3px);
+
+    transition: 0.3s ease;
 }
+
 .menu-toggle{
   display: none;
 }
@@ -297,7 +312,7 @@ body{
 .about{
   color: white;
 }
-.service-card{
+.card{
   background: rgba(255,255,255,0.2);
   color: white;
   padding: 20px;
@@ -349,10 +364,19 @@ footer p:hover{
   color: black;
 }
 
-.light-mode .service-card{
+.light-mode .card{
   background: white;
   color: black;
 }
+
+.light-mode .card p{
+    color: #333;
+}
+
+.light-mode .card h3{
+    color: black;
+}
+
 .light-mode .about{
   background: #f3f4f6;
   color: black;
@@ -360,6 +384,11 @@ footer p:hover{
 
 .light-mode .about p{
   color: #333;
+}
+
+.light-mode .about-card{
+    background: white;
+    border: 1px solid #d1d5db;
 }
 
 .light-mode footer{
@@ -373,6 +402,7 @@ body,
 footer{
   transition: 0.4s ease;
 }
+
 
 .navbar.scrolled{
   background: rgba(0,0,0,0.9);
@@ -399,35 +429,6 @@ footer{
   border-bottom: 2px solid #60a5fa;
 }
 
-.testimonials{
-  padding: 80px 50px;
-  text-align: center;
-  color: white;
-}
-
-.testimonial-container{
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  flex-wrap: wrap;
-}
-
-.testimonial-card{
-  background: rgba(255,255,255,0.1);
-  padding: 25px;
-  width: 300px;
-  border-radius: 15px;
-  backdrop-filter: blur(10px);
-  transition: 0.3s ease;
-}
-
-.testimonial-card:hover{
-  transform: translateY(-10px);
-}
-
-.testimonial-card p{
-  margin-bottom: 15px;
-}
 .contact{
   padding: 80px 20px;
   text-align: center;
@@ -448,6 +449,29 @@ footer{
   border: none;
   border-radius: 10px;
   font-size: 16px;
+
+  background: rgba(255,255,255,0.1);
+  color: white;
+}
+
+/* Placeholder dark mode */
+#contact-form input::placeholder,
+#contact-form textarea::placeholder{
+  color: #d1d5db;
+}
+
+/* LIGHT MODE */
+.light-mode #contact-form input,
+.light-mode #contact-form textarea{
+  background: white;
+  color: black;
+  border: 2px solid #ccc;
+}
+
+/* Placeholder light mode */
+.light-mode #contact-form input::placeholder,
+.light-mode #contact-form textarea::placeholder{
+  color: #555;
 }
 
 #contact-form textarea{
@@ -469,3 +493,78 @@ footer{
   outline: none;
   box-shadow: 0 0 10px #60a5fa;
 }
+
+.testimonials{
+    padding: 80px 50px;
+    text-align: center;
+}
+
+.testimonials{
+    background: linear-gradient(to right, #141e30, #243b55);
+}
+
+.testimonials h2{
+    color: white;
+}
+
+.testimonial-container{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.testimonial-card{
+    background: rgba(255,255,255,0.15);
+    padding: 25px;
+    width: 300px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    color: white;
+    transition: 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.testimonial-card:hover{
+    transform: translateY(-10px);
+}
+
+.testimonial-card p{
+    color: white;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.testimonial-card h4{
+    color: white;
+}
+
+/* LIGHT MODE */
+
+.light-mode .testimonials{
+    background: #e5e7eb;
+}
+
+.light-mode .testimonials h2{
+    color: black;
+}
+.light-mode .testimonials{
+    background: #f3f4f6;
+}
+
+.light-mode .testimonial-card{
+    background: white;
+    color: black;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.light-mode .testimonial-card p{
+    color: #333;
+}
+
+.light-mode .testimonial-card h4{
+    color: black;
+}
+
+
